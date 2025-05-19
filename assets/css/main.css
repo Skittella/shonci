@@ -5,7 +5,192 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+/* Styling for the Intro Section (to use your banner as background) */
+#intro {
+    background-image: url('../images/image_4a0b4a.jpg'); /* Adjust path if your images folder is not directly one level up from css */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: #fff; /* Ensure text is visible on the dark background */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds a shadow to make text stand out */
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    min-height: 100vh; /* Ensure it takes full viewport height */
+}
 
+#intro h1,
+#intro p {
+    color: #fff; /* Explicitly set text color for better contrast */
+    /* You might want to adjust font-size or line-height here as well if needed */
+}
+
+/* Optional: If the "Portfolio" heading in the sidebar is still showing and you want to hide it */
+#sidebar h2 {
+    display: none; /* This will hide any <h2> inside the sidebar */
+}
+
+/* Adjustments for portfolio sections (if images are not aligning well) */
+/* The "Hyperspace" template handles this well by default, but if you have overrides, check them */
+#portfolio .image {
+    display: block; /* Ensure the image is treated as a block element */
+    width: 100%; /* Make sure it takes full width of its container */
+    overflow: hidden; /* Hide parts of the image that go beyond the container */
+}
+
+#portfolio .image img {
+    width: 100%; /* Ensure the image fills its container */
+    height: 100%; /* Ensure the image fills its container */
+    object-fit: cover; /* This will crop the image to fit without distorting it */
+}
+
+/* --- New additions for side-by-side images and hamburger menu --- */
+
+/* Section for "3D Graphics" images */
+/* This will ensure your black_hole.png and train.png display side-by-side */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows images to wrap to the next line on smaller screens */
+    justify-content: center; /* Centers the images horizontally */
+    gap: 2em; /* Adds space between images */
+    margin-bottom: 3em; /* Adds space below the image gallery */
+}
+
+.image-gallery .image {
+    flex: 1 1 45%; /* Allows images to grow/shrink and take up about half the container width */
+    max-width: 45%; /* Ensures images don't get too wide */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    text-align: center; /* Centers the image if it's smaller than its container */
+}
+
+.image-gallery .image img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Removes extra space below the image */
+}
+
+/* Adjustments for smaller screens for image gallery */
+@media screen and (max-width: 736px) {
+    .image-gallery .image {
+        flex: 1 1 90%; /* On small screens, images take up almost full width */
+        max-width: 90%;
+    }
+}
+
+/* Hamburger Menu Styles */
+/* These styles control the hamburger icon and sidebar behavior on smaller screens */
+
+#header.alt {
+    display: flex;
+    justify-content: flex-end; /* Pushes the menu icon to the right */
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #312450; /* Adjust to match your background */
+    padding: 1em 2em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#header.alt .logo {
+    display: none; /* Hide logo on mobile when alt header is active */
+}
+
+.menu-toggle {
+    display: none; /* Hidden by default on larger screens */
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 1001; /* Ensure it's above other content */
+}
+
+.menu-toggle .icon {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle .icon:before,
+.menu-toggle .icon:after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle .icon:before {
+    transform: translateY(-10px);
+}
+
+.menu-toggle .icon:after {
+    transform: translateY(10px);
+}
+
+/* Animation for when menu is active (transforms into an 'X') */
+body.is-menu-visible .menu-toggle .icon {
+    background-color: transparent; /* Hide the middle bar */
+}
+
+body.is-menu-visible .menu-toggle .icon:before {
+    transform: rotate(45deg);
+}
+
+body.is-menu-visible .menu-toggle .icon:after {
+    transform: rotate(-45deg);
+}
+
+/* Sidebar adjustments for mobile */
+@media screen and (max-width: 980px) { /* Adjust breakpoint as needed */
+    #sidebar {
+        /* Your existing sidebar styles, plus: */
+        position: fixed;
+        top: 0;
+        right: -320px; /* Hide sidebar off-screen initially */
+        width: 300px; /* Set a fixed width for the sidebar */
+        height: 100%;
+        background: #312450; /* Match your existing sidebar background */
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease-in-out; /* Smooth slide transition */
+        z-index: 999;
+        display: block; /* Override `display: none` for mobile */
+    }
+
+    body.is-menu-visible #sidebar {
+        right: 0; /* Slide sidebar into view */
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger icon on smaller screens */
+    }
+
+    /* Optional: Add an overlay when the menu is open to dim the background */
+    .body-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 998;
+        display: none; /* Hidden by default */
+    }
+
+    body.is-menu-visible .body-overlay {
+        display: block; /* Show overlay when menu is visible */
+    }
+}
+
+/* If the "See more" button (image_4a0b69.jpg) is an unexpected addition, ensure it's not custom code.
+   If you intend to have it, then ensure its styling is consistent. */
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
