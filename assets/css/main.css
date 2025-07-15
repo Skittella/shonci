@@ -1,11 +1,5 @@
-@import url(fontawesome-all.min.css);
 
-/*
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-/* Styling for the Intro Section (to use your banner as background) */
+
 #intro {
   background: url('/images/background.png') center center/cover no-repeat;
   position: relative;
@@ -32,6 +26,7 @@
 #intro .inner, #sidebar .inner {
   position: relative;
   z-index: 1;
+
 }
 #intro.fullscreen {
   display: flex;
@@ -2086,7 +2081,7 @@ input, select, textarea {
 /* Sidebar */
 
 	#sidebar {
-		padding: 2.5em 2.5em 0.5em 2.5em ;
+		padding: 2.5em 2em 0.5em 2em ;
 		background: #312450;
 		cursor: default;
 		height: 100vh;

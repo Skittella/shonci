@@ -1,27 +1,28 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
-    <title>Simona Hončárová - Portfolio</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript>
-      <link rel="stylesheet" href="assets/css/noscript.css" />
-    </noscript>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Simona Hončárová - Portfolio</title>
+
+  <link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
   <body class="is-preload">
     <section id="sidebar">
       <div class="inner">
         <nav>
           <ul>
             <li><a href="#intro">Welcome</a></li>
-            <li><a href="#portfolio">3D graphics</a></li>
-            <li><a href="#portfolio">UX/UI design</a></li>
-            <li><a href="#portfolio">Game projects</a></li>
-            <li><a href="#portfolio">2D art</a></li>
-            <li><a href="#portfolio">Photography</a></li>
+            <li><a href="#portfolio" >Projects</a></li>
+            <li><a href="3d_graphics_projects.html" class="overlay">3D graphics</a></li>
+            <li><a href="ux_ui_design_projects.html" class="overlay">UX/UI design</a></li>
+            <li><a href="game_projects.html" class="overlay">Game projects</a></li>
+            <li><a href="2d_art_projects.html" class="overlay">2D art</a></li>
+            <li><a href="photography_projects.html" class="overlay">Photography</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Get in Touch</a></li>
+         
           </ul>
         </nav>
       </div>
@@ -260,95 +261,11 @@
         </div>
       </section>
 
-      <section id="contact" class="wrapper style1 fade-up">
-        <div class="inner">
-          <h2>Get in touch</h2>
-          <p>Have a project in mind or just want to say hello? Feel free to reach out!</p>
-          <div class="split style1">
-            <section>
-              <form method="post" action="#">
-                <div class="fields">
-                  <div class="field half">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" />
-                  </div>
-                  <div class="field half">
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="email" />
-                  </div>
-                  <div class="field">
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" rows="5"></textarea>
-                  </div>
-                </div>
-                <ul class="actions">
-                  <li><a href="" class="button submit">Send Message</a></li>
-                </ul>
-              </form>
-            </section>
-            <section>
-              <ul class="contact">
-                <li>
-                  <h3>Email</h3>
-                  <a href="mailto:your_email@example.com"
-                    >your_email@example.com</a
-                  >
-                </li>
-                <li>
-                  <h3>Social</h3>
-                  <ul class="icons">
-                    <li>
-                      <a href="#" class="icon brands fa-twitter"
-                        ><span class="label">Twitter</span></a
-                      >
-                    </li>
-                    <li>
-                      <a href="#" class="icon brands fa-facebook-f"
-                        ><span class="label">Facebook</span></a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="https://github.com/your-github-profile"
-                        class="icon brands fa-github"
-                        ><span class="label">GitHub</span></a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="https://instagram.com/your-instagram"
-                        class="icon brands fa-instagram"
-                        ><span class="label">Instagram</span></a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="https://linkedin.com/in/your-linkedin-profile"
-                        class="icon brands fa-linkedin-in"
-                        ><span class="label">LinkedIn</span></a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="https://artstation.com/your-artstation"
-                        class="icon brands fa-artstation"
-                        ><span class="label">ArtStation</span></a
-                      >
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </section>
-          </div>
-        </div>
-      </section>
-    </div>
-
     <footer id="footer" class="wrapper style1-alt">
       <div class="inner">
         <ul class="menu">
           <li>&copy; Simona Hončárová. All rights reserved.</li>
-          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+ 
         </ul>
       </div>
     </footer>
@@ -361,6 +278,7 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
+      
 function plexus(canvasId, pointsCount, speed, dist) {
   const canvas = document.getElementById(canvasId);
   if (!canvas) return;
