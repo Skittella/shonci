@@ -281,6 +281,30 @@ input, select, textarea {
 	appearance: none;
 }
 
+.actions {
+	-moz-appearance: none;
+	-webkit-appearance: outline;
+	-ms-appearance: none;
+	appearance: none;
+	display: inline-block;
+	background: rgb(98, 80, 146);
+	border: none;
+	color: inherit;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	padding: 0.75em 1.5em;
+	border-radius: 0.65em;
+	margin-inline: 30%;
+	margin-bottom: 1em;
+	text-decoration: none;
+	text-transform: none;
+	-webkit-tap-highlight-color: transparent;
+	-ms-touch-action: manipulation;	
+	-ms-touch-select: none;
+	-webkit-touch-callout: none;
+}
 /* Basic */
 
 	@-ms-viewport {
